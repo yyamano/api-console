@@ -1,7 +1,7 @@
 <ol id="raml-console-documentation-container" ng-if="raml.documentation" class="raml-console-resource-list raml-console-resource-list-root raml-console-root-documentation raml-console-resources-documentationCollapsed">
   <li class="raml-console-resource-list-item raml-console-documentation-header" ng-if="raml.documentation.length > 0">
     <header class="raml-console-resource raml-console-resource-root raml-console-clearfix">
-      <span ng-if="hasDocumentationWithIndex()" class="raml-console-flag raml-console-resource-heading-flag raml-console-toggle-all" ng-click="collapseAll($event, documentList, 'documentationCollapsed')" ng-class="{'raml-console-resources-expanded':!documentationCollapsed}"><span ng-if="!documentationCollapsed">collapse</span><span ng-if="documentationCollapsed">expand</span> all</span>
+      <span ng-if="hasDocumentationWithIndex()" class="raml-console-flag raml-console-resource-heading-flag raml-console-toggle-all" ng-click="collapseAll($event, documentList, 'documentationCollapsed')" ng-class="{'raml-console-resources-expanded':!documentationCollapsed}"><span ng-if="!documentationCollapsed" translate>collapse all</span><span ng-if="documentationCollapsed" translate>expand all</span></span>
       <div class="raml-console-resource-path-container">
         <h2 class="raml-console-resource-section-title">
           <span class="raml-console-resource-path-active">Documentation</span>
@@ -23,7 +23,7 @@
             <option ng-repeat="header in filterHeaders(content)" value="{{header.value}}" ng-selected="header.value == selectedDocumentSection">{{header.label}}</option>
           </select>
         </div>
-        <button class="raml-console-resource-close-btn" ng-click="closeDocumentation($event)">
+        <button class="raml-console-resource-close-btn" ng-click="closeDocumentation($event)" translate>
           Close
         </button>
       </div>

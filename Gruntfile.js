@@ -30,6 +30,8 @@ module.exports = function (grunt) {
         'bower_components/angular-ui-codemirror/ui-codemirror.js',
         'bower_components/angular-marked/angular-marked.js',
         'bower_components/angular-highlightjs/angular-highlightjs.js',
+        'bower_components/angular-translate/angular-translate.js',
+        'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
         'bower_components/jszip/jszip.js',
         'bower_components/slug/slug.js',
         'bower_components/FileSaver/FileSaver.js',

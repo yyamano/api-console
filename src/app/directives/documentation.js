@@ -6,7 +6,7 @@
       restrict: 'E',
       templateUrl: 'directives/documentation.tpl.html',
       replace: true,
-      controller: function($scope) {
+      controller: function($scope, $translate) {
         var defaultSchemaKey = Object.keys($scope.securitySchemes).sort()[0];
         var defaultSchema    = $scope.securitySchemes[defaultSchemaKey];
 
@@ -204,12 +204,12 @@
           $this.toggleClass('raml-console-is-active');
 
           if (!$schema.hasClass('raml-console-is-active')) {
-            $this.text('Hide Schema');
+            $this.text($translate.instant('Hide Schema'));
             $schema
               .addClass('raml-console-is-active')
               .velocity('slideDown');
           } else {
-            $this.text('Show Schema');
+            $this.text($translate.instant('Show Schema'));
             $schema
               .removeClass('raml-console-is-active')
               .velocity('slideUp');

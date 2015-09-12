@@ -1,11 +1,11 @@
 <div ng-switch="ramlStatus">
   <div class="raml-console-initializer-container raml-console-initializer-primary" ng-switch-default>
-    <h1 class="raml-console-title">RAML Console</h1>
+    <h1 class="raml-console-title" translate>RAML Console</h1>
 
     <div class="raml-console-initializer-content-wrapper">
       <section>
         <header class="raml-console-initializer-row raml-console-initializer-subheader">
-          <h4 class="raml-console-initializer-subhead">Initialize from the URL of a RAML file</h4>
+          <h4 class="raml-console-initializer-subhead" translate>Initialize from the URL of a RAML file</h4>
         </header>
 
         <div class="raml-console-initializer-row">
@@ -16,14 +16,14 @@
             <span>{{errorMessage}}</span>
           </div>
           <div class="raml-console-initializer-action-group" align="right">
-            <button id="loadRamlFromUrl" class="raml-console-initializer-action raml-console-initializer-action-btn" ng-click="loadFromUrl()">Load from URL</button>
+            <button id="loadRamlFromUrl" class="raml-console-initializer-action raml-console-initializer-action-btn" ng-click="loadFromUrl()" translate>Load from URL</button>
           </div>
         </div>
       </section>
 
       <section>
         <header class="raml-console-initializer-row raml-console-initializer-subheader">
-          <h4 class="raml-console-initializer-subhead">or parse RAML in here</h4>
+          <h4 class="raml-console-initializer-subhead" translate>or parse RAML in here</h4>
         </header>
 
         <div class="raml-console-initializer-row">
@@ -39,7 +39,7 @@
             }" ng-model="$parent.raml"></textarea>
           </p>
           <div class="raml-console-initializer-action-group" align="right">
-            <button id="loadRaml" class="raml-console-initializer-action raml-console-initializer-action-btn" ng-click="loadRaml()">Load RAML</button>
+            <button id="loadRaml" class="raml-console-initializer-action raml-console-initializer-action-btn" ng-click="loadRaml()" translate>Load RAML</button>
           </div>
         </div>
       </section>

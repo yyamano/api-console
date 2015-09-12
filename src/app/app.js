@@ -19,12 +19,20 @@
     'RAML.Security',
     'hc.marked',
     'ui.codemirror',
-    'hljs'
+    'hljs',
+    'pascalprecht.translate'
   ]).config(function (hljsServiceProvider) {
     hljsServiceProvider.setOptions({
       classPrefix: 'raml-console-hljs-'
     });
-  });
+  }).config(['$translateProvider', function ($translateProvider) {
+    $translateProvider.useSanitizeValueStrategy('escape');
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'locale/messages-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('ja');
+  }]);
 
   var loc = window.location;
   var uri = loc.protocol + '//' + loc.host + loc.pathname.replace(/\/$/, '');

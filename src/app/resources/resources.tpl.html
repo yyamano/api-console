@@ -28,13 +28,13 @@
         </div>
         <header class="raml-console-resource raml-console-resource-root raml-console-clearfix">
           <span ng-if="hasResourcesWithChilds()" class="raml-console-flag raml-console-resource-heading-flag raml-console-toggle-all" ng-click="collapseAll($event, resourceList, 'resourcesCollapsed')" ng-class="{'raml-console-resources-expanded':!resourcesCollapsed}">
-            <span ng-if="!resourcesCollapsed">collapse</span>
-            <span ng-if="resourcesCollapsed">expand</span> all
+            <span ng-if="!resourcesCollapsed" translate>collapse all</span>
+            <span ng-if="resourcesCollapsed" translate>expand all</span>
           </span>
 
           <div class="raml-console-resource-path-container">
             <h2 class="raml-console-resource-section-title">
-              <span class="raml-console-resource-path-active">Resources</span>
+              <span class="raml-console-resource-path-active" translate>Resources</span>
             </h2>
           </div>
           <close-button></close-button>
