@@ -1,0 +1,17 @@
+<div class="raml-console-meta-button-container">
+  <a 
+    class="raml-console-meta-button"
+    ng-click="open = !open"
+    click-outside="open = false">
+    <span translate>Switch Language</translate>
+  </a>
+
+  <div class="raml-console-meta-button-dropdown" ng-show="open">
+    <div ng-repeat="language in languages">
+      <a class="raml-console-meta-button-dropdown-item" ng-click="switchLanguage(language.key)">
+        {{language.name}}
+      </a>
+    </div>
+  </div>
+
+</div>

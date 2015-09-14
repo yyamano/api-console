@@ -19,6 +19,10 @@
           $scope.singleView = true;
         }
 
+        if ($attrs.hasOwnProperty('disableLanguageSwitcher')) {
+          $scope.disableLanguageSwitcher = true;
+        }
+
         if ($attrs.hasOwnProperty('disableThemeSwitcher')) {
           $scope.disableThemeSwitcher = true;
         }

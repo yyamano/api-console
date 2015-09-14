@@ -12,6 +12,7 @@
 
   <div ng-if="loaded">
     <div class="raml-console-meta-button-group">
+      <language-switcher ng-if="!disableLanguageSwitcher"></language-switcher>
       <theme-switcher ng-if="!disableThemeSwitcher"></theme-switcher>
       <raml-client-generator ng-if="!disableRamlClientGenerator"></raml-client-generator>
     </div>

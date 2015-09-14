@@ -31,7 +31,7 @@
       prefix: 'locale/messages-',
       suffix: '.json'
     });
-    $translateProvider.preferredLanguage('ja');
+    $translateProvider.determinePreferredLanguage();
   }]);
 
   var loc = window.location;
